@@ -7,6 +7,7 @@ public class Veiculo {
     private String placa;
 
     public Veiculo(TipoVeiculo tipo, Marca marca, String modelo, String placa) {
+        this.tipo = tipo;
         this.marca = marca;
         this.modelo = modelo;
         this.placa = placa;
