@@ -1,6 +1,7 @@
 .vscode
 
 lib/
+bin/
 
 # Compiled class file
 *.class
