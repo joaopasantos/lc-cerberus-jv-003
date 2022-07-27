@@ -1,12 +1,12 @@
 package br.com.bb.lc.models;
 
 public class Veiculo {
-    TipoVeiculo tipo;
+    private TipoVeiculo tipo;
     private Marca marca;
     private String modelo;
     private String placa;
 
-    public Veiculo(Marca marca, String modelo, String placa) {
+    public Veiculo(TipoVeiculo tipo, Marca marca, String modelo, String placa) {
         this.marca = marca;
         this.modelo = modelo;
         this.placa = placa;
