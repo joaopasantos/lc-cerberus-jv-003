@@ -3,8 +3,9 @@ package br.com.bb.lc.models;
 public abstract class Cliente {
     private String nome;
     private String telefone;
+    private Endereco endereco;
 
-    public Cliente(String nome, String telefone) {
+    public Cliente(String nome, String telefone, Endereco endereco) {
         this.nome = nome;
         setTelefone(telefone);
     }
@@ -26,5 +27,16 @@ public abstract class Cliente {
             throw new IllegalArgumentException("Número de telefone inválido. Não foi possível concluir a operação.");
         }
         this.telefone = telefone;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        if (endereco == null) {
+            throw new IllegalArgumentException("Endereço precisa ser preenchido.");
+        }
+        this.endereco = endereco;
     }
 }

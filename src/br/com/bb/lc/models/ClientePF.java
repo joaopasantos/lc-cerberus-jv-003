@@ -3,8 +3,8 @@ package br.com.bb.lc.models;
 public class ClientePF extends Cliente {
     private String cpf;
 
-    public ClientePF(String nome, String telefone, String cpf) {
-        super(nome, telefone);
+    public ClientePF(String nome, String telefone, Endereco endereco, String cpf) {
+        super(nome, telefone, endereco);
         setCpf(cpf);
     }
 
