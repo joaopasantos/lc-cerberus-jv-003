@@ -6,8 +6,9 @@ public abstract class Cliente {
     private Endereco endereco;
 
     public Cliente(String nome, String telefone, Endereco endereco) {
-        this.nome = nome;
-        setTelefone(telefone);
+        this.setNome(nome);
+        this.setTelefone(telefone);
+        this.setEndereco(endereco);
     }
 
     public String getNome() {
@@ -15,6 +16,10 @@ public abstract class Cliente {
     }
 
     public void setNome(String nome) {
+        if (nome.isBlank() || nome == null)
+            throw new IllegalArgumentException("Nome não foi preenchido. Não foi possível concluir a operação.");
+        if (nome.length() < 3)
+            throw new IllegalArgumentException("Nome inválido. Deve ser maior do que 3 caracteres.");
         this.nome = nome;
     }
 
@@ -23,6 +28,8 @@ public abstract class Cliente {
     }
 
     public void setTelefone(String telefone) {
+        if (telefone.isBlank() || telefone == null)
+            throw new IllegalArgumentException("Telefone não foi preenchido. Não foi possível concluir a operação.");
         if (telefone.length() < 10) {
             throw new IllegalArgumentException("Número de telefone inválido. Não foi possível concluir a operação.");
         }
