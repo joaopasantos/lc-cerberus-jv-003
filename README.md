@@ -3,6 +3,7 @@
 ## Enunciado
 
 Esse projeto foi o projeto final do módulo de Orientação a Objetos II da trilha Java da Let's Code.
+Grupo: Ediana Carvalho da Silveira, Joao Pedro Albuquerque dos Santos, Mariana Xavier Moreira.
 
 > ### 🚙 Aluguel de Carros
 >
